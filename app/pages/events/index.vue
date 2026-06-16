@@ -46,7 +46,7 @@
   &__nav-link {
     font-size: 16px;
     font-weight: 400;
-    font-family: @font8;
+    font-family: @font1;
     text-decoration: none;
 
     &:hover,

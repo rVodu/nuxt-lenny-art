@@ -116,7 +116,7 @@ const datetime = computed(() => {
 
   &__title {
     font-size: 70px;
-    font-family: @font5;
+    font-family: @font2;
     font-weight: 500;
     line-height: 90px;
 
@@ -161,7 +161,7 @@ const datetime = computed(() => {
   }
 
   &__time {
-    font-family: @font4;
+    font-family: @font3;
     font-size: 30px;
     text-transform: uppercase;
 
@@ -260,7 +260,7 @@ const datetime = computed(() => {
 
     h5 {
       font-size: 18px;
-      font-family: @font6;
+      font-family: @font1;
       margin-bottom: 21px;
 
       @media @bw370 {

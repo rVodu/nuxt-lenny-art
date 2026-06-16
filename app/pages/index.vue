@@ -1,20 +1,29 @@
 <template>
   <div class="home">
-
     <AppHero class="home__hero" />
-    <AppOffers class="home__offers" />
-    <AppAbout class="home__about" />
+
+    <section id="events">
+      <AppOffers class="home__offers" />
+    </section>
+
+    <section id="about">
+      <AppAbout class="home__about" />
+    </section>
+
     <AppUpcoming class="home__upcoming" />
 
+    <section id="blog">
+      <AppListing v-slot="{ list }" title="Блог" :moreLink="true" :grid="'column'"
+        :url="'http://localhost:3000/json/blog.json'" class="home__listing">
+        <ArticleCard v-for="card in list" :key="card.slug" :data="card" class="app-listing__card" />
+      </AppListing>
+    </section>
 
-    <AppListing v-slot="{ list }" title="Блог" :moreLink="true" :grid="'column'"
-      :url="'http://localhost:3000/json/blog.json'" class="home__listing">
-      <ArticleCard v-for="card in list" :key="card.slug" :data="card" class="app-listing__card" />
-    </AppListing>
+    <section id="contacts">
+      <AppContacts class="home__contacts" />
+    </section>
 
-    <AppContacts class="home__contacts" />
     <AppDoit class="home__doit" />
-
   </div>
 </template>
 
@@ -45,5 +54,12 @@ if (data?.value) list.value = data.value;
     margin-bottom: 40px;
     margin-top: 80px;
   }
+}
+
+#events,
+#blog,
+#about,
+#contacts {
+  scroll-margin-top: 170px;
 }
 </style>
