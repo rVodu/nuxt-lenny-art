@@ -7,6 +7,8 @@
     </main>
 
     <PageFooter class="app__footer" />
+
+    <AppScrollTop />
   </div>
 </template>
 
