@@ -1,6 +1,8 @@
 <template>
-    <section class="app-listing">
-        <h1 class="app-listing__title section-title">{{ title }}</h1>
+    <div class="app-listing">
+        <h2 class="app-listing__title section-title">
+            {{ title }}
+        </h2>
 
         <div :class="ListClass">
             <slot :list="list" />
@@ -12,7 +14,7 @@
         </button>
 
         <a v-else-if="moreLink" href="#" class="app-upcoming__link link">Смотреть все</a>
-    </section>
+    </div>
 </template>
 
 <script setup>

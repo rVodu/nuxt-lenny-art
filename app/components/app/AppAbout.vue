@@ -1,52 +1,105 @@
 <template>
     <section class="app-about">
-        <h1 class="app-listing__title section-title">О нас</h1>
+        <h2 class="app-listing__title section-title">О нас</h2>
 
         <div class="app-about__grid">
             <div class="app-about__block1">
-                <h3 class="app-about__title">Проект «Millennials»</h3>
+                <h3 class="app-about__title">
+                    Проект «Millennials»
+                </h3>
+
                 <p class="app-about__text">
-                    Вдохновлен молодыми идейными людьми, увлеченными творчеством, эмоциями и желанием сделать мир лучше,
-                    проявить себя. У них есть талант и стремление, у нас возможность помочь им воплотить их мечту в
-                    реальность.
+                    Вдохновлен молодыми идейными людьми, увлеченными творчеством,
+                    эмоциями и желанием сделать мир лучше, проявить себя.
+                    У них есть талант и стремление, у нас возможность помочь им
+                    воплотить их мечту в реальность.
                 </p>
             </div>
+
             <div class="app-about__block2">
                 <picture class="app-about__picture">
-                    <source type="image/webp" srcset="assets/images/about/pic.webp" />
-                    <img src="assets/images/about/pic.jpg" class="app-about__img" alt="pic">
+                    <source
+                        type="image/webp"
+                        srcset="assets/images/about/pic.webp"
+                    />
+
+                    <img
+                        src="assets/images/about/pic.jpg"
+                        class="app-about__img"
+                        alt="Проект Millennials"
+                    >
                 </picture>
-                <h3 class="app-about__title">Мы предоставляем площади для вашего мероприятия</h3>
+
+                <h3 class="app-about__title">
+                    Мы предоставляем площади для вашего мероприятия
+                </h3>
+
                 <picture class="app-about__picture2">
-                    <img src="assets/images/about/pic 2.jpg" class="app-about__img" alt="pic2">
+                    <img
+                        src="assets/images/about/pic 2.jpg"
+                        class="app-about__img"
+                        alt="Площадка для мероприятий"
+                    >
                 </picture>
+
                 <p class="app-about__text2">
-                    И оказываем помощь с организацией, если вам это нужно. <br>
+                    И оказываем помощь с организацией, если вам это нужно.
+                    <br>
                     Наша цель: вовлечь в культурную жизнь города как можно больше людей,
                     помочь молодым ребятам сделать первые шаги к своей мечте
                     и рассказать всем о том, что их волнует.
                 </p>
             </div>
-            <div class="app-about__block3">
-                <picture class="app-about__picture3">
-                    <div class="app-about__rectangle"></div>
-                    <source type="image/webp" media="(max-width: 450px)"
-                        srcset="assets/images/about/pic3_mobile.webp" />
-                    <source media="(max-width: 450px)" srcset="assets/images/about/pic3_mobile.jpg" />
-                    <source type="image/webp" srcset="assets/images/about/pic3.webp" />
-                    <img src="assets/images/about/pic3.jpg" class="app-about__img3" alt="pic3">
-                </picture>
-                <p class="app-about__text3">
-                    Мы уже успешно организовали и провели более 100 проектов. Посмотрите, как это было классно.
-                </p>
-                <button class="app-about__button">
-                    <a href="#" class="app-about__link">Смотреть</a>
-                    <a href="" class="app-about__arrow">
-                        <SvgIcon class="app-about__logo" name="arrow_down" width="91" height="60" />
-                    </a>
-                </button>
-            </div>
 
+            <div class="app-about__block3">
+                <div class="app-about__picture-wrapper">
+                    <div class="app-about__rectangle"></div>
+
+                    <picture class="app-about__picture3">
+                        <source
+                            type="image/webp"
+                            media="(max-width: 450px)"
+                            srcset="assets/images/about/pic3_mobile.webp"
+                        />
+
+                        <source
+                            media="(max-width: 450px)"
+                            srcset="assets/images/about/pic3_mobile.jpg"
+                        />
+
+                        <source
+                            type="image/webp"
+                            srcset="assets/images/about/pic3.webp"
+                        />
+
+                        <img
+                            src="assets/images/about/pic3.jpg"
+                            class="app-about__img3"
+                            alt="Наши проекты"
+                        >
+                    </picture>
+                </div>
+
+                <p class="app-about__text3">
+                    Мы уже успешно организовали и провели более 100 проектов.
+                    Посмотрите, как это было классно.
+                </p>
+
+                <a href="#" class="app-about__button">
+                    <span class="app-about__link">
+                        Смотреть
+                    </span>
+
+                    <span class="app-about__arrow">
+                        <SvgIcon
+                            class="app-about__logo"
+                            name="arrow_down"
+                            width="91"
+                            height="60"
+                        />
+                    </span>
+                </a>
+            </div>
         </div>
     </section>
 </template>

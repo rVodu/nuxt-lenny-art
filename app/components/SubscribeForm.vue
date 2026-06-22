@@ -1,6 +1,6 @@
 <template>
   <form class="subscribe-form" @submit.prevent="onSubmit">
-    <h4 class="subscribe-form__title">Подпишись и будь в курсе происходящего</h4>
+    <h3 class="subscribe-form__title">Подпишись и будь в курсе происходящего</h3>
 
     <div class="subscribe-form__wrapper">
       <div class="subscribe-form__field-wrapper">

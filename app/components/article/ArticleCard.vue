@@ -3,11 +3,16 @@
         <a href="" class="article-card__link">
             <picture class="article-card__picture">
                 <source type="image/webp" media="(max-width: 450px)" :srcset="data.img_webp" />
-                <source type="image/webp" media="(max-width: 450px)" :srcset="data.img" />
+
+                <source media="(max-width: 450px)" :srcset="data.img" />
+
                 <source type="image/webp" media="(max-width: 1169px)" :srcset="data.img_tablet_webp" />
+
                 <source media="(max-width: 1169px)" :srcset="data.img_tablet" />
+
                 <source type="image/webp" :srcset="data.img_webp" />
-                <img :src="data.img" alt="@alt" class="article-card__img" />
+
+                <img :src="data.img" :alt="data.alt" class="article-card__img" />
             </picture>
         </a>
         <div class="article-card__info">
@@ -15,9 +20,9 @@
                 {{ date }}
             </time>
             <a href="" class="article-card__title-link">
-                <h4 class="article-card__title">
+                <h3 class="article-card__title">
                     {{ data.title }}
-                </h4>
+                </h3>
 
                 <div class="article-card__arrow arrow">
                     <SvgIcon class="article-card__arrow-icon" name="arrow" width="92" height="62" />

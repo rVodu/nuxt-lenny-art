@@ -1,6 +1,6 @@
 <template>
     <div class="app-offers">
-        <h3 class="app-offers__title">Я хочу:</h3>
+        <h2 class="app-offers__title">Я хочу:</h2>
         <div class="app-offers__btns">
             <button class="app-offers__btn--red" type="button" @click="openPopup()">Провести мероприятие</button>
             <button class="app-offers__btn" type="button">Стать арендатором</button>
