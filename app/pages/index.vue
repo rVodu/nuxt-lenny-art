@@ -3,7 +3,7 @@
     <AppHero class="home__hero" />
 
     <section id="events">
-      <AppOffers class="home__offers" />
+      <AppOffers :events="eventsList" class="home__offers" />
     </section>
 
     <section id="about">
@@ -27,17 +27,27 @@
   </div>
 </template>
 
-
 <script setup>
+import { ref, computed } from 'vue';
 
-const list = ref([]);
+const eventsList = ref([]);
 const URL = "http://localhost:3000/json/events.json";
 
-const { data } = await useAsyncData(`events`, () => {
-  return $fetch(URL);
-});
-if (data?.value) list.value = data.value;
-
+const { data, pending, error, refresh } = await useAsyncData(
+  'events',
+  async () => {
+    try {
+      const result = await $fetch(URL);
+      return result || [];
+    } catch (err) {
+      console.error('Ошибка загрузки событий:', err);
+      return [];
+    }
+  },
+  {
+    lazy: true,
+  }
+);
 </script>
 
 <style lang="less">
